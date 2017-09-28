@@ -1,7 +1,11 @@
+## Promise: An Introduction
+---
+
 ### Slide Link
 https://docs.google.com/presentation/d/1HQQv-1mI9V3wXa319eIPZipcgd8yzB4VSrPP48eGZ7I/edit#slide=id.gc6f80d1ff_0_0
 
 
+### Code listing
 ```javascript
 
 function publishArticle(id, channelId) {
