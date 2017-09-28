@@ -1,5 +1,4 @@
 ## Promise: An Introduction
----
 
 ### Slide Link
 https://docs.google.com/presentation/d/1HQQv-1mI9V3wXa319eIPZipcgd8yzB4VSrPP48eGZ7I/edit#slide=id.gc6f80d1ff_0_0
@@ -8,6 +7,7 @@ https://docs.google.com/presentation/d/1HQQv-1mI9V3wXa319eIPZipcgd8yzB4VSrPP48eG
 ### Code listing
 ```javascript
 
+// typical node style code.
 function publishArticle(id, channelId) {
   // get article content
   // get channel from store.
@@ -63,6 +63,7 @@ function publishArticle(id, channelId, callback) {
 
 }
 
+// with these functions
 function getArticle(id, cb) { ... }
 function getChannel(id, cb) { ... }
 function validateArticle(article, spec, cb) { ... }
@@ -70,7 +71,7 @@ function ensureAccessToken(channel, cb) { ... }
 function findDuplicate(article, channel, cb) { ... }
 function publishToChannel(article, channel, cb) { ... }
 
-
+// naive attempt
 function publishArticle(articleId, channelId) {
   let channel, article;
   getChannel()
@@ -93,6 +94,7 @@ function publishArticle(articleId, channelId) {
     });
 }
 
+// better way
 function publishArticle(id, channelId) {
   let channel, article;
     return Promise.all([
